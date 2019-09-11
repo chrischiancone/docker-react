@@ -7,3 +7,20 @@ before_install:
 
 script:
   - docker run -e CI=true cchiancone/docker-react npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-west-2"
+  app: "dicker-react"
+  env: "DickerReact-env"
+  bucket_name: "elasticbeanstalk-us-west-2-295562847024"
+  bucket_path: "dicker-react"
+  on: 
+    branch: master
+  access_key_id: 
+    secure: $AWS_ACCESS_KEY
+  secret_access_key: 
+    secure: $AWS_SECRET_KEY
+
+
+
