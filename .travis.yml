@@ -1,9 +1,9 @@
 sudo :required
-servivces:
+services:
   - docker
 
   before_install:
     - docker build -t cchiancone/docker-react -f Dockerfile.dev .
-    
+
 script:
   - docker run -e CI=true cchiancone/docker-react npm run test
