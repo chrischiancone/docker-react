@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Formerly Encryptics
+          Formerly Encryptics!
         </a>
       </header>
     </div>
